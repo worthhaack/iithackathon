@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hackathon Competition – Registration Form</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f1f3f4;color:#202124}
+.top-line{height:10px;background:#673ab7}
+.container{width:min(720px,calc(100% - 24px));margin:28px auto 50px}
+.form-header,.section{background:#fff;border:1px solid #dadce0;border-radius:8px;margin-bottom:12px;padding:24px}
+.form-header{border-top:10px solid #673ab7;padding-top:20px}
+h1{font-size:28px;font-weight:500;margin:0 0 14px}
+h2{font-size:20px;font-weight:500;margin:0 0 8px}
+.description{line-height:1.6;color:#5f6368;font-size:14px}
+.required-note{color:#d93025;font-size:13px;margin-top:18px}
+.section-title{padding-bottom:15px;border-bottom:1px solid #eee;margin-bottom:20px}
+.section-title p{margin:5px 0 0;color:#5f6368;font-size:13px}
+.question{margin-bottom:25px}
+.question:last-child{margin-bottom:0}
+.question-label{display:block;font-size:15px;margin-bottom:11px;line-height:1.5}
+.star{color:#d93025}
+input[type=text],input[type=email],input[type=tel],input[type=number],select{
+width:100%;max-width:500px;border:0;border-bottom:1px solid #9aa0a6;padding:10px 2px;
+font-size:14px;outline:none;background:transparent
+}
+input:focus,select:focus{border-bottom:2px solid #673ab7}
+select{border:1px solid #dadce0;border-radius:4px;padding:11px;background:#fff}
+.option{display:flex;align-items:center;gap:10px;margin:13px 0;font-size:14px}
+.option input{accent-color:#673ab7}
+.qr-box{text-align:center;padding:18px;border:1px solid #dadce0;border-radius:6px;background:#fafafa;margin:10px 0 25px}
+.qr-box img{width:300px;max-width:100%;display:block;margin:12px auto}
+.amount{font-size:20px;font-weight:bold;margin-bottom:5px}
+.small{font-size:12px;color:#5f6368}
+.file-input{border:1px solid #dadce0;padding:12px;border-radius:4px;max-width:500px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;margin:15px 0}
+.check input{margin-top:3px;accent-color:#673ab7}
+.buttons{display:flex;align-items:center;justify-content:space-between;margin-top:20px}
+button{border:0;border-radius:4px;padding:11px 24px;font-size:14px;font-weight:600;cursor:pointer}
+.submit{background:#673ab7;color:white}.submit:hover{background:#5e35b1}
+.reset{color:#673ab7;background:transparent}
+.success{display:none;background:#e6f4ea;color:#137333;border:1px solid #b7dfbd;border-radius:8px;padding:18px;margin-bottom:12px;line-height:1.5}
+footer{text-align:center;color:#777;font-size:12px;margin-top:25px}
+@media(max-width:600px){
+.container{width:calc(100% - 14px);margin-top:14px}
+.form-header,.section{padding:18px}
+h1{font-size:23px}
+}
+</style>
+</head>
+
+<body>
+<div class="top-line"></div>
+
+<div class="container">
+
+<div class="form-header">
+<h1>HACKATHON COMPETITION – REGISTRATION FORM</h1>
+<div class="description">
+<strong>Registration Fee: ₹700 per Team</strong><br>
+<strong>Team Size: 2–3 Members</strong><br><br>
+Please fill in all the required details carefully. The person submitting this form
+will be considered the <strong>Team Leader</strong>.
+</div>
+<div class="required-note">* Indicates required question</div>
+</div>
+
+<div id="success" class="success">
+<strong>Registration submitted successfully!</strong><br>
+Thank you for registering for the Hackathon. Your registration details have been submitted.
+</div>
+
+<form id="hackathonForm">
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 1 – TEAM DETAILS</h2>
+<p>Basic information about your team.</p>
+</div>
+
+<div class="question">
+<label class="question-label">1. Team Name <span class="star">*</span></label>
+<input type="text" name="teamName" required>
+</div>
+
+<div class="question">
+<label class="question-label">2. Number of Team Members <span class="star">*</span></label>
+<select name="teamSize" required>
+<option value="">Choose</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+</div>
+
+<div class="question">
+<label class="question-label">3. College Name <span class="star">*</span></label>
+<input type="text" name="college" required>
+</div>
+
+<div class="question">
+<label class="question-label">4. Department <span class="star">*</span></label>
+<input type="text" name="department" required>
+</div>
+
+<div class="question">
+<label class="question-label">5. Year of Study <span class="star">*</span></label>
+<select name="year" required>
+<option value="">Choose</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 2 – TEAM LEADER DETAILS</h2>
+<p>The applicant will act as the official team leader.</p>
+</div>
+
+<div class="question">
+<label class="question-label">6. Team Leader / Applicant Name <span class="star">*</span></label>
+<input type="text" name="leaderName" required>
+</div>
+
+<div class="question">
+<label class="question-label">7. Phone Number <span class="star">*</span></label>
+<input type="tel" name="leaderPhone" required>
+</div>
+
+<div class="question">
+<label class="question-label">8. Email Address <span class="star">*</span></label>
+<input type="email" name="leaderEmail" required>
+</div>
+
+<div class="question">
+<label class="question-label">9. College ID / Roll Number <span class="star">*</span></label>
+<input type="text" name="leaderId" required>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 3 – TEAM MEMBER 2</h2>
+<p>Required for every team.</p>
+</div>
+
+<div class="question">
+<label class="question-label">10. Member 2 Name <span class="star">*</span></label>
+<input type="text" name="member2Name" required>
+</div>
+
+<div class="question">
+<label class="question-label">11. Member 2 Phone Number <span class="star">*</span></label>
+<input type="tel" name="member2Phone" required>
+</div>
+
+<div class="question">
+<label class="question-label">12. Member 2 Email <span class="star">*</span></label>
+<input type="email" name="member2Email" required>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 4 – TEAM MEMBER 3</h2>
+<p>Fill this section only if your team has 3 members.</p>
+</div>
+
+<div class="question">
+<label class="question-label">13. Member 3 Name</label>
+<input type="text" name="member3Name">
+</div>
+
+<div class="question">
+<label class="question-label">14. Member 3 Phone Number</label>
+<input type="tel" name="member3Phone">
+</div>
+
+<div class="question">
+<label class="question-label">15. Member 3 Email</label>
+<input type="email" name="member3Email">
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 5 – ACCOMMODATION</h2>
+</div>
+
+<div class="question">
+<label class="question-label">16. Do you require accommodation? <span class="star">*</span></label>
+<label class="option"><input type="radio" name="accommodation" value="Yes" required> Yes</label>
+<label class="option"><input type="radio" name="accommodation" value="No"> No</label>
+</div>
+
+<div class="question">
+<label class="question-label">17. Number of members requiring accommodation</label>
+<input type="number" name="accommodationCount" min="1" max="3">
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 6 – REGISTRATION PAYMENT</h2>
+<p>Registration Fee: ₹700 per team.</p>
+</div>
+
+<div class="qr-box">
+<div class="amount">₹700 per Team</div>
+<div class="small">Scan the QR code below to make the registration payment.</div>
+<img src="payment-qr.jpg" alt="Hackathon payment QR code">
+<div class="small">After payment, upload the payment screenshot below.</div>
+</div>
+
+<div class="question">
+<label class="question-label">18. Upload Payment Screenshot <span class="star">*</span></label>
+<input class="file-input" type="file" name="paymentScreenshot" accept="image/*,.pdf" required>
+<div class="small">Accepted: JPG, PNG or PDF</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<h2>SECTION 7 – DECLARATION</h2>
+</div>
+
+<label class="check">
+<input type="checkbox" required>
+<span>I confirm that all the information provided above is correct. <span class="star">*</span></span>
+</label>
+
+<label class="check">
+<input type="checkbox" required>
+<span>I agree to follow the rules and regulations of the Hackathon. <span class="star">*</span></span>
+</label>
+
+<label class="check">
+<input type="checkbox" required>
+<span>I confirm that I am the Team Leader/Applicant representing this team. <span class="star">*</span></span>
+</label>
+</div>
+
+<div class="buttons">
+<button type="reset" class="reset">Clear form</button>
+<button type="submit" class="submit">Submit</button>
+</div>
+
+</form>
+
+<footer>Hackathon Competition • Team Registration</footer>
+</div>
+
+<script>
+document.getElementById("hackathonForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+    }
+    document.getElementById("success").style.display = "block";
+    window.scrollTo({top: 0, behavior: "smooth"});
+});
+</script>
+</body>
+</html>
